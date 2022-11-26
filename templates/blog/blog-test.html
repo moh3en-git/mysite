@@ -1,0 +1,21 @@
+{% load blog_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test blog</title>
+</head>
+<body>
+     <p> {% hello 'ali' %} </p>
+     <p> {% plustwo 3 %}</p>
+     <p> {% totalpost %}</p>
+     {% totalpost as tp %}
+     <p>{{ tp }}</p>
+     {% listpost as lp %}
+     {% for p in lp %}
+     <p>{{p}}</p>
+     {% endfor %}
+</body>
+</html>

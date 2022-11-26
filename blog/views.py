@@ -12,3 +12,6 @@ def blog_single(request,pid):
     #post  = get_object_or_404(Post,pk=pid,status = 1)
     contex = {"post":post}
     return render(request,'blog/blog-single.html',contex)
+
+def blog_test(request):
+    return render(request,'blog/blog-test.html')
