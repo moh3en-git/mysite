@@ -17,5 +17,9 @@
      {% for p in lp %}
      <p>{{p}}</p>
      {% endfor %}
+     {% listpost as lp %}
+     {% for p in lp %}
+     <p>{{p.content|snipet:50}}</p>
+     {% endfor %}
 </body>
 </html>

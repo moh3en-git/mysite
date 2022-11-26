@@ -22,3 +22,8 @@ def T_post():
 def l_post():
     posts = Post.objects.filter(status = 1)
     return posts
+
+#------------------ create custom filter tag ---------------------------------------
+@register.filter
+def snipet(value,args = 20):
+    return value[:args]    
