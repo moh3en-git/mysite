@@ -27,3 +27,9 @@ def l_post():
 @register.filter
 def snipet(value,args = 20):
     return value[:args]    
+
+# ------------------ create inclusion tags ----------------------------------------
+@register.inclusion_tag('popularpost.html')
+def popularpost():
+    posts = Post.objects.filter(status=1).order_by("-published_date")[:2]
+    return {'posts':posts}   
